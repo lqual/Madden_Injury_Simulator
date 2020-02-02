@@ -3,13 +3,38 @@ library(dplyr)
 
 
 #build dataframe of positions and injury probability
-pr
+positionsdf <- read.csv("position_probabilities_3-4_defense.csv", 
+                        stringsAsFactors = FALSE)
+
+
+#calculate probabilities of injury by position
+positionsdf <- positionsdf %>% mutate(probabilities = position_count/sum(position_count))
+
+
+#select a position
+lookupHurt <- sample(1:length(positionsdf$position), 
+                  size = 1, replace = FALSE, 
+                  prob = positionsdf$probabilities)
+position <- positionsdf[lookupHurt, 1]
+position
+
+
+#build dataframe of number of injured weeks
+weeksdf <- read.csv("injured_weeks_probability.csv", 
+                        stringsAsFactors = FALSE)
+
+
+#select a number of weeks
+lookupWeeks <- sample(1:length(weeksdf$injured_weeks), 
+               size = 1, replace = FALSE, 
+               prob = weeksdf$probability)
+weeks <- weeksdf[lookupWeeks, 1]
+weeks
 
 
 
-positionProbs <- c(10/26, 5/26, 2/26, 2/26, 2/26, 1/26, 1/26, 1/26, 1/26, 1/26)
-lookup1 <- sample(1:10, size = 3, replace = FALSE, prob = myprobs)
-unigram <- data.frame(next_word = c("the", "and", "for", "that", "you",
-                                    "with", "Was", "this", "have","are"))
-answer1 <- data.frame(unigram$next_word[lookup1])
-colnames(answer1) <- "answer"
+
+
+
+
+

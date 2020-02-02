@@ -1,30 +1,29 @@
 position,position_count
 QB,1
 HB1,1
-HB2,
-FB,
+HB2,0.4
+FB,0.4
 WR1,1
 WR2,1
-WR3,
+WR3,0.6
 TE1,1
-TE2,
+TE2,0.5
 LT,1
 LG,1
 C,1
 RG,1
 RT,1
-Punt Returner,
+Punt Returner,0.2
 RE,1
-DT,
+DT,0.7
 LE,1
-DL Backup,
 LOLB,1
 MLB1,1
-MLB2,
+MLB2,0.8
 ROLB,1
-OLB Backup,
+OLB Backup,0.5
 CB1,1
 CB2,1
-CB3,
+CB3,0.9
 FS,1
 SS,1
