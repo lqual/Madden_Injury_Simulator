@@ -1,0 +1,13 @@
+name: Madden_Injury_Simulator
+title: Madden_Injury_Simulator
+username:
+account: lqual
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1785195
+bundleId: 2787367
+url: https://lqual.shinyapps.io/Madden_Injury_Simulator/
+when: 1581299131.99899
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes|simulatorCode.R

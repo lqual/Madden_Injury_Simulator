@@ -32,6 +32,12 @@ weeks <- weeksdf[lookupWeeks, 1]
 weeks
 
 
+#injury
+injury <- sample(c("Yes", "No", "No", "No"), 1)
+
+
+#quarter
+quarter <- sample(c("Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"), 1)
 
 
 
