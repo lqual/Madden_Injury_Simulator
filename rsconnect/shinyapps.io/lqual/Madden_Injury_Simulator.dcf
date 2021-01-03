@@ -5,9 +5,9 @@ account: lqual
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1785195
-bundleId: 2787367
+bundleId: 4052117
 url: https://lqual.shinyapps.io/Madden_Injury_Simulator/
-when: 1581299131.99899
+when: 1609641953.04718
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .gitattributes|simulatorCode.R
+ignoredFiles: .gitattributes|simulatorCode.R|Old App/server.R|Old App/ui.R

@@ -15,10 +15,6 @@ shinyUI(fluidPage(theme = shinytheme("flatly"),
                                           "slider", "Week of Season",
                                           value = 1, min = 1, max = 20, step = 1
                                   ),
-                                  sliderInput(
-                                          "probability", "Injury Probability",
-                                          value = .25, min = 0, max = 1, step = 0.05
-                                  ),
                                   actionButton(
                                           inputId = "run_it",
                                           label = "Run Simulator"
@@ -26,40 +22,40 @@ shinyUI(fluidPage(theme = shinytheme("flatly"),
                           ),
                           mainPanel(
                             h2(""),
-                            textOutput("text_1"),
-                            tags$head(tags$style("#text_1{color: black;
+                            textOutput("injury"),
+                            tags$head(tags$style("#injury{color: black;
                             font-size: 25px;
                             }"
                             )
                             ),
                             h2(""),
-                            textOutput("text_2"),
-                            tags$head(tags$style("#text_2{color: black;
+                            textOutput("position_hurt"),
+                            tags$head(tags$style("#position_hurt{color: black;
                             font-size: 25px;
                             }"
                             )
                             ),
                             h2(""),
-                            textOutput("text_3"),
-                            tags$head(tags$style("#text_3{color: black;
+                            textOutput("quarter_hurt"),
+                            tags$head(tags$style("#quarter_hurt{color: black;
                             font-size: 25px;
                             }"
                             )
                             ),
                             h2(""),
-                            textOutput("text_4"),
-                            tags$head(tags$style("#text_4{color: black;
+                            textOutput("weeks_out"),
+                            tags$head(tags$style("#weeks_out{color: black;
                             font-size: 25px;
                             }"
                             )
                             ),
-                            #h2(""),
-                            #textOutput("week_return"),
-                            #tags$head(tags$style("#week_return{color: black;
-                            #font-size: 25px;
-                            #}"
-                            #)
-                            #),
+                            h2(""),
+                            textOutput("week_return"),
+                            tags$head(tags$style("#week_return{color: black;
+                            font-size: 25px;
+                            }"
+                            )
+                            ),
                     )
             )        
 ))
