@@ -2,6 +2,13 @@ library(shiny)
 library(dplyr)
 library(shinybusy)
 library(shinythemes)
+
+
+#week number for slider
+week_number <- read.csv("week_number.csv", 
+                        stringsAsFactors = FALSE)
+
+
 shinyUI(fluidPage(theme = shinytheme("flatly"),
                   titlePanel(
                           h1("Madden Injury Simulator", align = "center")
@@ -13,7 +20,8 @@ shinyUI(fluidPage(theme = shinytheme("flatly"),
                                      week's game."),
                                   sliderInput(
                                           "slider", "Week of Season",
-                                          value = 1, min = 1, max = 20, step = 1
+                                          value = week_number$week_number[1], 
+                                          min = 1, max = 20, step = 1
                                   ),
                                   sliderInput(
                                           "probability", "Injury Probability",

@@ -23,13 +23,28 @@ shinyServer(function(input, output) {
         weeksdf <- read.csv("injured_weeks_probability.csv", 
                             stringsAsFactors = FALSE)
         
-        
+
         observeEvent(input$run_it, {
                 show_modal_spinner()
                 
                 week_of_season <- input$slider
                 #probability <- input$probability
                 
+                
+                #update week number in input file
+                next_weak <- read.csv("week_number.csv", 
+                                        stringsAsFactors = FALSE)
+                next_weak$week_number[1] <- ifelse(
+                  week_of_season > 19,
+                  1,
+                  week_of_season + 1
+                )
+                write.table(next_weak, 
+                            "week_number.csv",
+                            col.names = T,
+                            row.names = F,
+                            append = F,
+                            sep = ",")
                 
                 #offense select a position
                 offense_lookupHurt <- sample(1:length(offensedf$position), 
