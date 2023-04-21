@@ -1,13 +1,13 @@
 position,position_count,group
 QB,1,Offense
 HB1,1,Offense
-HB2,1,Offense
+HB2,0.7,Offense
 FB,0.3,Offense
 WR1,1,Offense
 WR2,1,Offense
 WR3,0.7,Offense
 TE1,1,Offense
-TE2,0.5,Offense
+TE2,0.4,Offense
 LT,0.8,Offense
 LG,0.8,Offense
 C,0.8,Offense

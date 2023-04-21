@@ -32,19 +32,19 @@ shinyServer(function(input, output) {
                 
                 
                 #update week number in input file
-                next_weak <- read.csv("week_number.csv", 
+                next_weak <- read.csv("week_number.csv",
                                         stringsAsFactors = FALSE)
                 next_weak$week_number[1] <- ifelse(
                   week_of_season > 19,
                   1,
                   week_of_season + 1
                 )
-                write.table(next_weak, 
-                            "week_number.csv",
-                            col.names = T,
-                            row.names = F,
-                            append = F,
-                            sep = ",")
+                # write.table(next_weak, 
+                #             "week_number.csv",
+                #             col.names = T,
+                #             row.names = F,
+                #             append = F,
+                #             sep = ",")
                 
                 #offense select a position
                 offense_lookupHurt <- sample(1:length(offensedf$position), 
