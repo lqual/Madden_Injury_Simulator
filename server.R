@@ -61,7 +61,7 @@ shinyServer(function(input, output) {
                 
                 
                 #offense injury
-                injury_prob <- input$probability / 2
+                injury_prob <- input$probability #/ 2
                 non_injury_prob <- 1 - injury_prob
                 offense_injury <- sample(c("Yes, there was an injury on offense.", 
                                    "No, there wasn't an injury on offense."),
@@ -103,7 +103,7 @@ shinyServer(function(input, output) {
                 
                 
                 #defense injury
-                injury_prob <- input$probability / 2
+                injury_prob <- input$probability #/ 2
                 non_injury_prob <- 1 - injury_prob
                 defense_injury <- sample(c("Yes, there was an injury on defense.", 
                                            "No, there wasn't an injury on defense."),
